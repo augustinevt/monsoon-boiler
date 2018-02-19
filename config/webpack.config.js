@@ -53,8 +53,8 @@ const productionConfig = merge([
     },
     output: {
       path: PATHS.build,
-      filename: 'static/js/bundle.[hash:8].js',
-      chunkFilename: 'static/js/[name].[chunkhash:8].chunk.js',
+      filename: 'static__js__bundle.[hash:8].js',
+      chunkFilename: 'static__js__[name].[chunkhash:8].chunk.js',
     },
   },
   parts.minifyJavaScript(),

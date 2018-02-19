@@ -51,6 +51,7 @@ export class DuckContainer extends React.Component {
     return (
       <div>
         <DuckComponent foo={''}/>
+        <h1> EOA UTILS </h1>
         <div className="duck-container__user-grid">
           { users }
         </div>

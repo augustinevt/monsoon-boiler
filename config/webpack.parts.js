@@ -122,7 +122,7 @@ exports.extractCSS = ({ use } = {}) => {
     // `allChunks` is needed with CommonsChunkPlugin to extract
     // from extracted chunks as well.
     allChunks: true,
-    filename: "static/styles/main.[contenthash:8].css",
+    filename: "static__styles__main.[contenthash:8].css",
   });
 
   return {
