@@ -7,6 +7,11 @@ const questions = [
    type: 'input',
    message: 'Build and deploy util app?',
    name: 'deploy'
+ },
+  {
+   type: 'input',
+   message: 'Does the AWS CLI have the proper config (export AWS_PROFILE=prod)?',
+   name: 'reminder'
   }
 ];
 

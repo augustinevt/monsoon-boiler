@@ -27,7 +27,7 @@ const requestFactory = (config) => (key, options) => {
 export const api = (key, options) => {
   const jwt = localStorage.getItem('jwt');
   return apiConfig[key](request, options)
-    .set('X-JWT', jwt)
+    .set('X-JWT', jwt);
 };
 
 // export default requestFactory(apiConfig);
