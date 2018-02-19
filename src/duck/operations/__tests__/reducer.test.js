@@ -17,8 +17,10 @@ describe('The thing Reducer', () => {
     };
 
     const expected = {
-      loading: false,
-      users: [{ value: '34', id: '1' }, {value: '27', id: '2'}],
+      users: {
+        loading: false,
+        users: [{ value: '34', id: '1' }, {value: '27', id: '2'}],
+      }
     };
 
     const result = reducer(initialState, action);

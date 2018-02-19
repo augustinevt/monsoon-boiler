@@ -8,7 +8,8 @@ import { LoadingIndicator, Card } from '@monsoon_inc/monsoon-components';
 
 const mapStateToProps = (state) => {
   return {
-    users: state,
+    users: state.users.users,
+    loading: state.users.loading,
   };
 };
 
@@ -20,8 +21,8 @@ export class DuckContainer extends React.Component {
   };
 
   async componentDidMount()  {
-    this.props.dispatch({type: "USER_FETCH_REQUESTED", payload: {txnID: 3}});
-    this.exAsyncCall();
+    this.props.dispatch({type: "USER_FETCH_REQUESTED", payload: {}});
+    // this.exAsyncCall();
   }
 
   async exAsyncCall() {
@@ -36,7 +37,7 @@ export class DuckContainer extends React.Component {
   }
 
   makeUserCards() {
-    return this.props.users.users.map( user => {
+    return this.props.users.map( user => {
       return <Card title={user.name}>
         <div> {user.email} </div>
         <div> {user.phone} </div>
@@ -46,7 +47,7 @@ export class DuckContainer extends React.Component {
   }
 
   render() {
-    const jsx = this.props.users.loading ? <LoadingIndicator /> : <div className="duck-container">{process.env.NODE_ENV}<br/>{process.env.REACT_HELLO}</div>;
+    const jsx = this.props.loading ? <LoadingIndicator /> : <div className="duck-container">{process.env.NODE_ENV}<br/>{process.env.REACT_HELLO}</div>;
     const users = this.makeUserCards();
     return (
       <div>

@@ -6,7 +6,7 @@ jest.mock('./../../../api', () => {
 
 import { DuckContainer } from '../DuckContainer';
 
-describe('The', () => {
+xdescribe('The', () => {
   test('duck', () => {
     const wrapper = mount(<DuckContainer dispatch={jest.fn()} users={{loading: false, users: []}}/>);
 

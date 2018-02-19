@@ -45,7 +45,9 @@
       "src/**/*.{js,jsx}"
     ],
     "setupFiles": [
-      "<rootDir>/config/jest/test-setup.js"
+      "<rootDir>/config/jest/test-setup.js",
+      "<rootDir>/config/polyfills.js",
+      "<rootDir>/config/jest/mockLocalStorage.js"
     ],
     "testPathIgnorePatterns": [
       "<rootDir>[/\\\\](build|docs|node_modules|scripts)[/\\\\]"
